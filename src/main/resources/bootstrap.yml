@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: coe-h2-promotions
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        healthCheckPath: /health
+        healthCheckInterval: 15s
+        hostname: localhost
+        port: 8090
+    

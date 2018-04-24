@@ -1,0 +1,17 @@
+{
+    "id": "spring-ms-data",
+    "application": "Spring-MicroService",
+    "accesspoint": "http://172.31.0.233:8080",
+    "containers": [
+        {"name": "data", "replicas": 1, "cpu": 1100, "memory": "1000Mi", "port": 30065, "image": "snyamars007/spring-ms-data", "command": [
+                            "java",
+                            "-jar",
+                            "-Dlogging.file=/tmp/coe-spring-data-cassandra.log",
+                            "-Dspring.cloud.config.uri=http://172.31.0.153:8888",
+                            "-Dspring.data.cassandra.contact-points=172.31.0.153",
+                            "-Dspring.cloud.consul.host=172.31.0.153",
+                            "-Dspring.cloud.consul.discovery.port=30065",
+                            "coe-spring-data-cassandra-rest-0.0.1-SNAPSHOT.jar"
+                        ]}
+        ]
+}
