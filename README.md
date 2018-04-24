@@ -10,6 +10,6 @@ Current Entity is Promotion which need to be replaced with the project specific 
 
 In the properties file update this property to what suits your project
 
-spring.jpa.hibernate.ddl-auto = create-drop
+<code>spring.jpa.hibernate.ddl-auto = create-drop</code>
 
 # coe-spring-data-mysql-rest
